@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 
-const Project = () => {
-    return (
-        <p>project</p>
-    );
-};
+// const Project = () => {
+//     return (
+//         <p>project</p>
+//     );
+// };
 
-export default Project;
+// export default Project;
