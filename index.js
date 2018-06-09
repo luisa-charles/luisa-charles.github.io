@@ -22,8 +22,8 @@ app.use('/api', router);
 
 app.use(errorHandler);
 
-app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/client/build/index.html'));
 });
 
 app.listen(port, () => console.log(`Live on port ${port}`));
