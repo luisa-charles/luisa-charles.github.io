@@ -14,16 +14,16 @@ app.use(express.static(`${__dirname}/public`));
 mongoose.connect(dbURI);
 app.use(bodyParser.json());
 
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static('client/build'));
+// }
 
 app.use('/api', router);
 
 app.use(errorHandler);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build/index.html'));
+    res.sendFile(path.join(__dirname, 'src/index.html'));
 });
 
 app.listen(port, () => console.log(`Live on port ${port}`));
