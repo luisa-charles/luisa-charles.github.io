@@ -18,6 +18,10 @@ app.use('/api', router);
 
 app.use(errorHandler);
 
+app.route('/*').get(function (req, res) {
+    return res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
 app.listen(port, () => console.log(`Live on port ${port}`));
 
 module.exports = app;
