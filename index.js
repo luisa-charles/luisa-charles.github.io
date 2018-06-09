@@ -19,7 +19,7 @@ app.use('/api', router);
 app.use(errorHandler);
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, '/public'), function (err) {
+    res.sendFile(path.join(__dirname, 'src/index.html'), function (err) {
         if (err) {
             res.status(500).send(err)
         }
