@@ -1,27 +1,46 @@
 import React from 'react';
 import axios from 'axios';
+import _ from 'lodash';
 
 import { Link } from 'react-router-dom';
 
 import Project from '../projects/Project.js';
+import SearchBar from '../projects/SearchBar.js';
 
 class ProjectsIndex extends React.Component {
 
     state = {
-        projects: []
+        projects: [],
+        query: ''
     }
 
     componentDidMount() {
         axios.get('/api/projects')
-            .then(res => this.setState({ projects: res.data }, () => console.log(this.state)));
-            // .then(res => this.setState({ projects: res.data }));
+            // .then(res => this.setState({ projects: res.data }, () => console.log(this.state)));
+            .then(res => this.setState({ projects: res.data }));
+    }
+
+    handleSort = (e) => {
+        const query = e.target.innerHTML;
+        this.setState({ query });
+        // console.log(e.target.innerHTML);
+    }
+
+    handleSortFilterLogic = () => {
+        if (this.state.query === 'All') this.setState({ query: '' });
+        const { query } = this.state;
+        const regex = new RegExp(query, 'i');
+
+        const filteredProjects = _.filter(this.state.projects, (project) => regex.test(project.type));
+        return filteredProjects;
     }
 
     render() {
         return (
             <div>
+                <SearchBar handleSort={ this.handleSort } />
                 <ul className="columns is-multiline">
-                    {this.state.projects.map((project, i) => 
+                    {this.handleSortFilterLogic().map((project, i) => 
                         <li key={i} className="column is-one-third">
                             <Link to={`/projects/${project._id}`}>
                                 <div className="card">
