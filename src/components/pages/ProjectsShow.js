@@ -27,11 +27,22 @@ class ProjectsShow extends React.Component {
             <div>
                 <h1 className="title">{this.state.project.name}</h1>
                 <p>{this.state.project.materials}</p>
-                <p>{this.state.project.text}</p>
-                <figure className="image">
-                    <img src={this.state.project.image} alt={this.state.project.name} />
-                </figure>
-
+                <div className="columns">
+                    <div className="column is-three-fifths">
+                        <figure className="image">
+                            <img src={this.state.project.image} alt={this.state.project.name} />
+                        </figure>
+                        <figure className="image">
+                            <img src={this.state.project.image} alt={this.state.project.name} />
+                        </figure>
+                        <figure className="image">
+                            <img src={this.state.project.image} alt={this.state.project.name} />
+                        </figure>
+                    </div>
+                    <div className="column is-two-fifths">
+                        <p>{this.state.project.text}</p>
+                    </div>
+                </div>
                 {/* {this.state.deletePressed ? (
                     <div>
                         <p>Are you sure?</p>
