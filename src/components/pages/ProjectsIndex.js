@@ -46,6 +46,7 @@ class ProjectsIndex extends React.Component {
                                 <div className="card">
                                     <div className="card-content">
                                         <h3 className="title is-4">{project.name}</h3>
+                                        <p>{project.materials}</p>
                                     </div>
                                     <div className="card-image">
                                         <figure className="image">

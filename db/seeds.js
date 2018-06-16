@@ -14,25 +14,23 @@ mongoose.connect(dbURI, (err, db) => {
     // Project.collection.drop();
 
     Project.create([{
-    name: 'Project 1 Film',
-    image: 'http://placecorgi.com/250',
-    text: 'Congratulations, you played yourself. Fan luv. They don’t want us to win. Fan luv. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. We the best. Lion! Stay focused. You smart, you loyal, you a genius. The key to more success is to have a lot of pillows. The ladies always say Khaled you smell good, I use no cologne. Cocoa butter is the key. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.',
-    type: 'Film'
+    name: 'Kardia',
+    image: 'https://i.imgur.com/7SySdDb.png?1',
+    text: 'Kardia is a site-specific interactive installation, created in collaboration with Abdullah Habib, for the Science Gallery&apos;s season titled Blood: Life Uncut. It is an exploration of the internalisation and externalisation of the human heart beat, and comes in the form of a haptic chair. Users experience near complete sensory deprivation, with their only recognisable sensation becoming the feeling of their own heartbeat, beating through the chair.',
+    type: 'Interactive',
+    materials: 'Interactive installation'
 },{
-    name: 'Project 2 Other',
-    image: 'http://placecorgi.com/250',
-    text: 'Congratulations, you played yourself. Fan luv. They don’t want us to win. Fan luv. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. We the best. Lion! Stay focused. You smart, you loyal, you a genius. The key to more success is to have a lot of pillows. The ladies always say Khaled you smell good, I use no cologne. Cocoa butter is the key. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.',
-    type: 'Other'
+    name: 'Taste Sensations',
+    image: 'https://i.imgur.com/md6z80M.png',
+    text: 'Taste sensations is an interactive eating experience in response to the Science Museum&apos;s brief regarding Food. It is an investigation into how different sense can affect perception of food. BREAK. Taste sensations was exhibited at the Science Museum&apos;s Lates in January. It comes in the form of four miniature sensory experiences: miracle berries that make sour taste sweet, 3D printed fruit shaped candies that trick your ocular senses, a soundscape that makes crisps feel crunchier, and flavoured chocolates that all taste the same.',
+    type: 'Interactive',
+    materials: 'Interactive eating experience'
 },{
-    name: 'Project 3 Film',
-    image: 'http://placecorgi.com/250',
-    text: 'Congratulations, you played yourself. Fan luv. They don’t want us to win. Fan luv. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. We the best. Lion! Stay focused. You smart, you loyal, you a genius. The key to more success is to have a lot of pillows. The ladies always say Khaled you smell good, I use no cologne. Cocoa butter is the key. You see the hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.',
-    type: 'Film'
-},{
-    name: 'Test project',
-    image: 'http://placecorgi.com/250',
-    text: 'test',
-    type: 'Test'
+    name: 'Call Me Mummy',
+    image: 'https://i.imgur.com/hiwgILw.png',
+    text: 'Call Me Mummy is a short film that was written, produced, and edited within a 48 hour period as part of the 2017 48 Hour Film Project in London. It is the culmination of months of planning and producing, in collaboration with Lucio Martus and a crew of over 36 students and young professionals. BREAK. The coming of age narrative is an exploration of the responsibility that comes with sensitive information, and is based on true stories known to various crew members.It follows a snippet of the life of Tina, a young woman who is forced to come to terms with the realisation that her mother is a sex worker.',
+    type: 'Film',
+    materials: 'Film'
 }])
         .then(projects => console.log(`${projects.length} projects created`))
         .catch(err => console.log(err))

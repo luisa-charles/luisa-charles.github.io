@@ -26,6 +26,7 @@ class ProjectsShow extends React.Component {
         return (
             <div>
                 <h1 className="title">{this.state.project.name}</h1>
+                <p>{this.state.project.materials}</p>
                 <p>{this.state.project.text}</p>
                 <figure className="image">
                     <img src={this.state.project.image} alt={this.state.project.name} />
