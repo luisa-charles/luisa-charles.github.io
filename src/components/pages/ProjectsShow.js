@@ -38,7 +38,7 @@ class ProjectsShow extends React.Component {
                         </figure>
                     </div>
                     <div className="column is-two-fifths">
-                        <p>{this.state.project.text}</p>
+                        <p dangerouslySetInnerHTML={{ __html: this.state.project.text }} ></p>
                     </div>
                 </div>
                 {/* {this.state.deletePressed ? (
