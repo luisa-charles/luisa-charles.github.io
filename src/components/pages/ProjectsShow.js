@@ -21,23 +21,24 @@ class ProjectsShow extends React.Component {
             .then(() => this.props.history.push('/projects'));
     }
 
+
     render() {
         if(!this.state.project) return null;
         return (
-            <div>
+            <div id="projects-show">
                 <div className="columns">
                     <div className="column is-three-fifths">
-                        <figure className="image">
+                        <figure className="image projects-show-padding-bottom">
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>
-                        <iframe src={this.state.project.videoSrc} width="797" height="448" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
-                        <figure className="image">
+                        <div style={{padding: '56.25% 0 0 0', position: 'relative'}}><iframe src={this.state.project.videoSrc} style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%'}} frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                        <figure className="image projects-show-padding-bottom">
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>
                     </div>
                     <div className="column is-two-fifths">
-                        <h1 className="title has-text-right">{this.state.project.name}</h1>
-                        <p className="subtitle has-text-right"><i>{this.state.project.materials}</i></p>
+                        <h1 className="title">{this.state.project.name}</h1>
+                        <p className="subtitle"><i>{this.state.project.materials}</i></p>
                         <p dangerouslySetInnerHTML={{ __html: this.state.project.text }} ></p>
                     </div>
                 </div>

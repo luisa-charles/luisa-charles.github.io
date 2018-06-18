@@ -1,6 +1,8 @@
-// @import "./utilities/variables/colors.scss";
+// Utilities
 @import "./utilities/fonts.scss";
-// @import "./utilities/variables/sizes.scss";
 
-// @import "./components/pages/projects-index.scss";
+// Pages
+@import "./components/pages/projects-show.scss";
+
+// Projects Index
 @import "./components/projects-index/search-bar.scss";
