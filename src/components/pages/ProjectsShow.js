@@ -32,9 +32,7 @@ class ProjectsShow extends React.Component {
                         <figure className="image">
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>
-                        <figure className="image">
-                            <img src={this.state.project.image} alt={this.state.project.name} />
-                        </figure>
+                        <iframe src={this.state.project.videoSrc} width="797" height="448" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe>
                         <figure className="image">
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>

@@ -9,11 +9,12 @@ const SearchBar = ({ handleSort }) => {
         //         <option value="other">Other</option>
         //     </select>
         // </div>
-        <div>
-            <p onClick={handleSort}>All</p>
-            <p onClick={handleSort}>Film</p>
-            <p onClick={handleSort}>Other</p>
-            <p onClick={handleSort}>Test</p>
+        <div id="search-bar">
+            <p className="filter-labels" onClick={handleSort}>All</p>
+            <p>/</p>
+            <p className="filter-labels" onClick={handleSort}>Interactive</p>
+            <p>/</p>
+            <p className="filter-labels" onClick={handleSort}>Film</p>
         </div>
     );
 };

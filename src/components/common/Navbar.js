@@ -27,7 +27,7 @@ class Navbar extends React.Component {
             <div>
                 <nav id="navbar" className="navbar">
                     <div className="navbar-brand">
-                            {/* <Link className="navbar-item" to="/projects">Projects</Link> */}
+                            <Link className="navbar-item" to="/projects">Luisa Charles</Link>
                         <div className={`navbar-burger ${this.state.navIsOpen ? 'is-active' : ''}`}
                             onClick={this.handleToggle}
                         >

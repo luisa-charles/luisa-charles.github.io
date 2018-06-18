@@ -37,7 +37,7 @@ class ProjectsIndex extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="projects-index">
                 <SearchBar handleSort={ this.handleSort } />
                 <ul className="columns is-multiline">
                     {this.handleSortFilterLogic().map((project, i) => 
