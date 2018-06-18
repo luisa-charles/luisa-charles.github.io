@@ -25,8 +25,6 @@ class ProjectsShow extends React.Component {
         if(!this.state.project) return null;
         return (
             <div>
-                <h1 className="title">{this.state.project.name}</h1>
-                <p>{this.state.project.materials}</p>
                 <div className="columns">
                     <div className="column is-three-fifths">
                         <figure className="image">
@@ -38,6 +36,8 @@ class ProjectsShow extends React.Component {
                         </figure>
                     </div>
                     <div className="column is-two-fifths">
+                        <h1 className="title has-text-right">{this.state.project.name}</h1>
+                        <p className="subtitle has-text-right"><i>{this.state.project.materials}</i></p>
                         <p dangerouslySetInnerHTML={{ __html: this.state.project.text }} ></p>
                     </div>
                 </div>
