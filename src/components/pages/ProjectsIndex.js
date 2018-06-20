@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 import { Link } from 'react-router-dom';
 
-import Project from '../projects/Project.js';
+// import Project from '../projects/Project.js';
 import SearchBar from '../projects/SearchBar.js';
 
 class ProjectsIndex extends React.Component {

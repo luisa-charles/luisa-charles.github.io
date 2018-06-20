@@ -6,7 +6,8 @@ const projectSchema = new mongoose.Schema({
     text: { type: String },
     type: { type: String },
     materials: { type: String },
-    videoSrc: { type: String }
+    videoSrc: { type: String },
+    imageSrcs: { type: Array }
 });
 
 module.exports = mongoose.model('Project', projectSchema);

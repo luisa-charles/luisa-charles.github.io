@@ -15,18 +15,20 @@ mongoose.connect(dbURI, (err, db) => {
 
     Project.create([{
     name: 'Kardia',
-    image: 'https://i.imgur.com/7SySdDb.png?1',
+        image: 'https://i.imgur.com/ODug5h6.jpg',
     text: '<i>Kardia</i> is a site-specific interactive installation, created in collaboration with Abdullah Habib, for the Science Gallery&apos;s season titled Blood: Life Uncut. It is an exploration of the internalisation and externalisation of the human heart beat, and comes in the form of a haptic chair. Users experience near complete sensory deprivation, with their only recognisable sensation becoming the feeling of their own heartbeat, beating through the chair.',
     type: 'Interactive',
     materials: 'Interactive installation',
     videoSrc: 'https://player.vimeo.com/video/275402588',
+    imageSrcs: ['https://i.imgur.com/wVQ4QpI.jpg', 'https://i.imgur.com/OLKRVPZ.jpg', 'https://i.imgur.com/C7Jeuxi.jpg', 'https://i.imgur.com/xV9yX50.jpg', 'https://i.imgur.com/jktiPzv.jpg']
 },{
     name: 'Taste Sensations',
-    image: 'https://i.imgur.com/md6z80M.png',
+            image: 'https://i.imgur.com/dTN8DQ9.png',
     text: '<i>Taste sensations</i> is an interactive eating experience in response to the Science Museum&apos;s brief regarding Food. It is an investigation into how different senses can affect perception of food.<br /><br /><i>Taste sensations</i> was exhibited at the Science Museum&apos;s Lates in January. It comes in the form of four miniature sensory experiences: miracle berries that make sour taste sweet, 3D printed fruit shaped candies that trick your ocular senses, a soundscape that makes crisps feel crunchier, and flavoured chocolates that all taste the same.',
     type: 'Interactive',
     materials: 'Interactive eating experience',
     videoSrc: 'https://player.vimeo.com/video/275402716',
+    imageSrcs: ['https://i.imgur.com/3GZxg7M.jpg', 'https://i.imgur.com/Bzj8q4e.jpg', 'https://i.imgur.com/U5JPyDi.jpg', 'https://i.imgur.com/FnqBtAQ.jpg', 'https://i.imgur.com/6Zs7qwo.jpg', 'https://i.imgur.com/CvMIP5R.jpg', 'https://i.imgur.com/92fhZ1a.jpg']
 },{
     name: 'Call Me Mummy',
     image: 'https://i.imgur.com/hiwgILw.png',
@@ -34,6 +36,7 @@ mongoose.connect(dbURI, (err, db) => {
     type: 'Film',
     materials: 'Film',
     videoSrc: 'https://player.vimeo.com/video/239317339',
+    imageSrcs: ['https://i.imgur.com/4ZLeBaB.jpg', 'https://i.imgur.com/LjjKVJC.png', 'https://i.imgur.com/MGviyjo.jpg', 'https://i.imgur.com/uJMbGaw.png', 'https://i.imgur.com/4EaMyrL.png']
 }])
         .then(projects => console.log(`${projects.length} projects created`))
         .catch(err => console.log(err))
