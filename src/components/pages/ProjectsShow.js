@@ -30,10 +30,10 @@ class ProjectsShow extends React.Component {
             <div id="projects-show">
                 <div className="columns">
                     <div className="column is-three-fifths">
-                        <figure className="image projects-show-padding-bottom">
+                        <figure>
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>
-                        <div style={{ padding: '56.25% 0 24px 0', position: 'relative' }}><iframe className="projects-show-padding-bottom" src={this.state.project.videoSrc} style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%'}} frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                        <div style={{ padding: '56.25% 0 24px 0', position: 'relative' }}><iframe src={this.state.project.videoSrc} style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%'}} frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                         {/* {this.state.project.imageSrcs.map((image, i) => 
                             <figure key={i} className="image projects-show-padding-bottom">
                                 <img src={image} />
