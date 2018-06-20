@@ -4,7 +4,7 @@ const ProjectImage = ({ images, alts }) => {
     return(
     <div>
         <figure className="image projects-show-padding-bottom">
-                {images.map(image, i => <img key={i} src={image} />)}
+                {images.map((image, i) => <img key={i} src={image} />)}
             {/* <img src={image} alt={alt} /> */}
         </figure>
     </div>

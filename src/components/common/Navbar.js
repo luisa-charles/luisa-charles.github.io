@@ -40,7 +40,7 @@ class Navbar extends React.Component {
                         <div className="navbar-end">
                         <Link className="navbar-item" to="/projects">Projects</Link>
                         <Link className="navbar-item" to="/about">About</Link>
-                        <Link className="navbar-item" to="/contact">Contact</Link>
+                        {/* <Link className="navbar-item" to="/contact">Contact</Link> */}
                         {Auth.isAuthenticated() && <Link className="navbar-item" to="/projects/new">New Project</Link>}
                         {Auth.isAuthenticated() && <a className="navbar-item" onClick={this.handleLogout}>Logout</a>}
                         </div>

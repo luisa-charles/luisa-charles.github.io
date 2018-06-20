@@ -34,14 +34,14 @@ class ProjectsShow extends React.Component {
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>
                         <div style={{ padding: '56.25% 0 24px 0', position: 'relative' }}><iframe className="projects-show-padding-bottom" src={this.state.project.videoSrc} style={{position: 'absolute', top: '0', left: '0', width: '100%', height: '100%'}} frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                        {this.state.project.imageSrcs.map(image => 
-                            <figure className="image projects-show-padding-bottom">
+                        {/* {this.state.project.imageSrcs.map((image, i) => 
+                            <figure key={i} className="image projects-show-padding-bottom">
                                 <img src={image} />
                             </figure>
-                        )}
+                        )} */}
                         
 
-                        {/* <ProjectImage images={this.state.project.imageSrcs} alts={this.state.project.name} /> */}
+                        <ProjectImage images={this.state.project.imageSrcs} alts={this.state.project.name} />
                     </div>
                     <div className="column is-two-fifths">
                         <h1 className="title">{this.state.project.name}</h1>
