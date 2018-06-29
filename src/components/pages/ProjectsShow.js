@@ -29,7 +29,7 @@ class ProjectsShow extends React.Component {
         return (
             <div id="projects-show">
                 <div className="columns">
-                    <div className="column is-three-fifths">
+                    <div className="column is-three-fifths-desktop">
                         <figure>
                             <img src={this.state.project.image} alt={this.state.project.name} />
                         </figure>
@@ -43,7 +43,7 @@ class ProjectsShow extends React.Component {
 
                         <ProjectImage images={this.state.project.imageSrcs} alts={this.state.project.name} />
                     </div>
-                    <div className="column is-two-fifths">
+                    <div className="column is-two-fifths-desktop">
                         <h1 className="title">{this.state.project.name}</h1>
                         <p className="subtitle"><i>{this.state.project.materials}</i></p>
                         <p dangerouslySetInnerHTML={{ __html: this.state.project.text }} ></p>
