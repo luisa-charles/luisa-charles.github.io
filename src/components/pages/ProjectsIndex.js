@@ -41,7 +41,7 @@ class ProjectsIndex extends React.Component {
                 <SearchBar handleSort={ this.handleSort } />
                 <ul className="columns is-multiline">
                     {this.handleSortFilterLogic().map((project, i) => 
-                        <li key={i} className="column is-one-third">
+                        <li key={i} className="column is-one-third-desktop is-half-tablet is-mobile">
                             <Link to={`/projects/${project._id}`}>
                                 <div className="card">
                                     <div className="card-content">
